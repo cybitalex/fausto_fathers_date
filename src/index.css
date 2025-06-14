@@ -1,13 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    135deg,
+    #f5e6d3 0%,
+    #e8d5b7 30%,
+    #d4c4a8 70%,
+    #c4a484 100%
+  );
+  min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Slider customization with Cuenca colors */
+.slick-dots {
+  bottom: -50px;
+}
+
+.slick-dots li button:before {
+  color: #8b4513 !important;
+  font-size: 14px !important;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4a90e2 !important;
+  opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #8b4513 !important;
+  font-size: 30px !important;
+}
+
+.slick-prev {
+  left: -50px !important;
+  z-index: 3;
+}
+
+.slick-next {
+  right: -50px !important;
+  z-index: 3;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b4513, #4a90e2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #a0522d, #5ba0f2);
+}
+
+.carousel-img-grilling,
+.carousel-img-familia,
+.carousel-img-party {
+  object-position: center center;
+}
+
+@media (max-width: 600px) {
+  .carousel-img-grilling {
+    object-position: center 30%;
+  }
+  .carousel-img-familia {
+    object-position: center 10%;
+  }
+  .carousel-img-party {
+    object-position: center 50%;
+  }
 }
